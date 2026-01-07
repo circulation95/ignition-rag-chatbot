@@ -1,0 +1,23 @@
+# Ignition 8.3 .gitignore configuration
+
+# Logs and Caches (로그 및 캐시 제외)
+logs/
+wrapper.log*
+.wrapper.log*
+**/*.log
+.ignition/
+temp/
+work/
+
+# Binary & Database (내부 DB 및 자동 백업 제외)
+db/
+sqlite/
+*.idb
+*.gwbk
+autobackup/
+
+# Local Specific Config (해당 PC 전용 설정 제외)
+local/
+certificates/
+webserver/
+*.keystore

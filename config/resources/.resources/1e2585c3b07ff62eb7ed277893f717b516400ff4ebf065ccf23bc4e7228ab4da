@@ -1,0 +1,26 @@
+{
+  "profile": {
+    "secureChannelRequired": false,
+    "securityLevels": [
+      {
+        "children": [],
+        "description": "Represents a user who has been authenticated by the system.",
+        "name": "Authenticated"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "Write"
+          }
+        ],
+        "name": "APIToken"
+      }
+    ],
+    "timestamp": 1763247931119,
+    "type": "basic-token"
+  },
+  "settings": {
+    "tokenHash": "CS45VkZLdMOK6y-xi1kBJvAaWtamfqx9OZtIg13JwNg"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "A",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "stop.png"
+  ],
+  "attributes": {
+    "width": 48,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "import",
+      "timestamp": "2025-11-15T22:40:52Z"
+    },
+    "size": 1054,
+    "lastModificationSignature": "7536e350011a1718ec3b91ef115509a1993c806e8a6f6c2aead36143f382c393",
+    "height": 48
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "A",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "disk_green.png"
+  ],
+  "attributes": {
+    "width": 48,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "import",
+      "timestamp": "2025-11-15T22:40:52Z"
+    },
+    "size": 491,
+    "lastModificationSignature": "4be50801c56063f3c0682dc55169f74da55336390aa7d38ea96e2b8ca0a6b822",
+    "height": 48
+  }
+}
