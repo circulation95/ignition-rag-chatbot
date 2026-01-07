@@ -1,0 +1,31 @@
+{
+  "pages": {
+    "/": {
+      "docks": {
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "auto",
+            "handle": "hide",
+            "iconUrl": "1",
+            "id": "1",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 400,
+            "viewParams": {
+              "key": "value"
+            },
+            "viewPath": "DockView"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "View"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom"
+  }
+}
