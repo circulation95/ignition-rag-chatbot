@@ -7,13 +7,13 @@
             "anchor": "fixed",
             "autoBreakpoint": 480,
             "content": "push",
-            "handle": "autoHide",
+            "handle": "hide",
             "iconUrl": "",
-            "id": "chat",
+            "id": "",
             "modal": false,
             "resizable": false,
-            "show": "auto",
-            "size": 400,
+            "show": "visible",
+            "size": 150,
             "viewParams": {},
             "viewPath": "DockView"
           }

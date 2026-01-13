@@ -59,22 +59,10 @@
     "props": {
       "direction": "column",
       "style": {
+        "backgroundColor": "#FAFAFA",
         "paddingBottom": 10,
         "paddingTop": 10
       }
-    },
-    "scripts": {
-      "customMethods": [],
-      "extensionFunctions": null,
-      "messageHandlers": [
-        {
-          "messageType": "invoke",
-          "pageScope": true,
-          "script": "\tsystem.perspective.print(payload)",
-          "sessionScope": false,
-          "viewScope": false
-        }
-      ]
     },
     "type": "ia.container.flex"
   }

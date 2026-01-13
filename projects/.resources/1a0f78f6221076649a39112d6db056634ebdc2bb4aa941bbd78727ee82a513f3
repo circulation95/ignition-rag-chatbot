@@ -8,7 +8,7 @@
             "autoBreakpoint": 480,
             "content": "push",
             "handle": "autoHide",
-            "iconUrl": "",
+            "iconUrl": "material/send",
             "id": "chat",
             "modal": false,
             "resizable": false,

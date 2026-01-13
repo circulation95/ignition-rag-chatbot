@@ -10,18 +10,6 @@
   "root": {
     "children": [
       {
-        "events": {
-          "dom": {
-            "onClick": {
-              "config": {
-                "id": "chat",
-                "type": "toggle"
-              },
-              "scope": "C",
-              "type": "dock"
-            }
-          }
-        },
         "meta": {
           "name": "Icon"
         },

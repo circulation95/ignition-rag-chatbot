@@ -6,13 +6,13 @@
           {
             "anchor": "fixed",
             "autoBreakpoint": 480,
-            "content": "push",
-            "handle": "autoHide",
-            "iconUrl": "",
-            "id": "chat",
+            "content": "auto",
+            "handle": "hide",
+            "iconUrl": "material/send",
+            "id": "",
             "modal": false,
             "resizable": false,
-            "show": "auto",
+            "show": "visible",
             "size": 400,
             "viewParams": {},
             "viewPath": "DockView"

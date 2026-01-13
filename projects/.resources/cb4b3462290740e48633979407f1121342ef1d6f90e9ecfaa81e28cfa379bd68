@@ -2,19 +2,21 @@
   "pages": {
     "/": {
       "docks": {
-        "left": [
+        "right": [
           {
             "anchor": "fixed",
             "autoBreakpoint": 480,
             "content": "push",
-            "handle": "autoHide",
-            "iconUrl": "",
-            "id": "chat",
+            "handle": "hide",
+            "iconUrl": "1",
+            "id": "1",
             "modal": false,
             "resizable": false,
-            "show": "auto",
+            "show": "visible",
             "size": 400,
-            "viewParams": {},
+            "viewParams": {
+              "key": "value"
+            },
             "viewPath": "DockView"
           }
         ]
