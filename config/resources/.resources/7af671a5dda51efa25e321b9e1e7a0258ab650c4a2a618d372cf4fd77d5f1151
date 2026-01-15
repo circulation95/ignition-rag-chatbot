@@ -1,0 +1,10 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[System]/Gateway/OPC/Connections/Ignition OPC UA Server/State",
+    "dataType": "Boolean",
+    "name": "TEST",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

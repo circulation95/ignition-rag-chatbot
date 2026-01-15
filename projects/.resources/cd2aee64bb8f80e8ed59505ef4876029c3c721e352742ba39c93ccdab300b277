@@ -1,0 +1,84 @@
+{
+  "custom": {},
+  "params": {
+    "msg": ""
+  },
+  "propConfig": {
+    "params.msg": {
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 39,
+      "width": 368
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TextField"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "view.params.msg"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "placeholder": "input question"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tinput_message \u003d self.view.params.msg\n\tif input_message:\n\t\tsystem.perspective.sendMessage(\"invoke\")\n\tself.view.params.msg \u003d \"\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Icon"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "props": {
+          "path": "material/send",
+          "style": {
+            "marginLeft": 10
+          }
+        },
+        "type": "ia.display.icon"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "paddingBottom": 2,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 2
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

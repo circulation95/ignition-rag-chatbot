@@ -1,0 +1,30 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "onKeyEvent.py"
+  ],
+  "attributes": {
+    "eventMode": "KEYDOWN",
+    "regexPattern": "",
+    "preventDefaultEventOption": false,
+    "enabled": true,
+    "eventBoundCode": "",
+    "capturePhaseEventOption": false,
+    "metaEventModifier": false,
+    "eventBound": "KEY",
+    "stopPropagationEventOption": false,
+    "lastModificationSignature": "0c5c5aa43f27ff757b502031609930bd97048333c446b66cf87687ff73c89cfb",
+    "altEventModifier": false,
+    "lastModification": {
+      "actor": "Admin",
+      "timestamp": "2026-01-14T13:12:51Z"
+    },
+    "regexWindow": 1,
+    "controlEventModifier": false,
+    "shiftEventModifier": false,
+    "eventBoundKey": "Enter"
+  }
+}

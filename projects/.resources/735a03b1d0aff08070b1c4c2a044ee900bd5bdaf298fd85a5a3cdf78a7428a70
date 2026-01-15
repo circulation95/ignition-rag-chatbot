@@ -1,0 +1,110 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 766,
+      "width": 270
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Input"
+        },
+        "position": {
+          "basis": "40px"
+        },
+        "props": {
+          "params": {
+            "msg": "value"
+          },
+          "path": "Input",
+          "style": {
+            "marginBottom": 20
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "elementPosition": {
+            "basis": "auto",
+            "grow": 0
+          },
+          "path": "Message",
+          "useDefaultViewHeight": false,
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tself.getSibling(\"FlexRepeater\").props.instances \u003d []"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "style": {
+            "marginLeft": 40,
+            "marginRight": 40
+          },
+          "text": "Clear"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "paddingBottom": 10,
+        "paddingTop": 10
+      }
+    },
+    "scripts": {
+      "customMethods": [
+        {
+          "name": "request",
+          "params": [
+            "query"
+          ],
+          "script": "\tmessage \u003d unicode(query)\n\tpayload \u003d {\n\t    \"question\": message \n\t}\n\tjson_str \u003d system.util.jsonEncode(payload)\n\turl \u003d \"http://localhost:8000/ask\"\n\t\n\ttry:\n\t    new_message \u003d {\n\t\t  \"msg\": message,\n\t\t  \"role\": \"Human\"\n\t\t}\n\t    self.getChild(\"FlexRepeater\").props.instances.append(new_message)\n\t    \n\t    response_body \u003d system.net.httpPost(url, \"application/json\", json_str, 10000, 60000)\n\t    ai_message \u003d system.util.jsonDecode(response_body)\n\t    \n\t    new_message \u003d {\n\t\t  \"msg\": unicode(ai_message.get(\"answer\")),\n\t\t  \"role\": \"Assistant\"\n\t\t}\n\t    self.getChild(\"FlexRepeater\").props.instances.append(new_message)\n\t    \n\t    \n\texcept Exception as e:\n\t    print(e)"
+        }
+      ],
+      "extensionFunctions": null,
+      "messageHandlers": [
+        {
+          "messageType": "invoke",
+          "pageScope": true,
+          "script": "\tinput_message \u003d self.getChild(\"Input\").props.params.msg\n\tself.request(input_message)\n\tself.getChild(\"Input\").props.params.msg \u003d \"\"",
+          "sessionScope": false,
+          "viewScope": false
+        }
+      ]
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "valueSource": "memory",
+    "dataType": "Boolean",
+    "name": "MEMORY",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/MEMORY",
+    "readOnly": false,
+    "dataType": "Int4",
+    "name": "FAN1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[System]/Gateway/UptimeSeconds",
+    "dataType": "Int4",
+    "name": "TEST",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

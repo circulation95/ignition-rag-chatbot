@@ -1,0 +1,129 @@
+{
+  "custom": {},
+  "params": {
+    "msg": "",
+    "role": ""
+  },
+  "propConfig": {
+    "params.msg": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.role": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 327,
+      "width": 290
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Assistant"
+            },
+            "position": {
+              "basis": "20px"
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.role} \u003d \"Assistant\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "path": "material/android",
+              "style": {
+                "marginLeft": 10
+              }
+            },
+            "type": "ia.display.icon"
+          },
+          {
+            "meta": {
+              "name": "Human"
+            },
+            "position": {
+              "basis": "20px"
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.role} \u003d \"Human\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "path": "material/face",
+              "style": {
+                "marginRight": 10
+              }
+            },
+            "type": "ia.display.icon"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "23px"
+        },
+        "props": {
+          "alignItems": "baseline",
+          "justify": "space-between"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "TextArea"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.msg"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "alignItems": "center",
+          "direction": "row",
+          "spellcheck": false
+        },
+        "type": "ia.input.text-area"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "paddingBottom": 2,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 15
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

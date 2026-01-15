@@ -1,0 +1,65 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 39,
+      "width": 368
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TextField"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 1
+        },
+        "props": {
+          "placeholder": "input question"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tinput_message \u003d self.getSibling(\"TextField\").props.text\n\tif input_message:\n\t\tsystem.perspective.sendMessage(\"request\", payload \u003d {\"query\": input_message})\n\tinput_message \u003d \"\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Icon"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "props": {
+          "path": "material/send",
+          "style": {
+            "marginLeft": 10
+          }
+        },
+        "type": "ia.display.icon"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "paddingBottom": 2,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 2
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

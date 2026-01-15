@@ -1,0 +1,15 @@
+[
+  {
+    "name": "FAN",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "name": "Status",
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

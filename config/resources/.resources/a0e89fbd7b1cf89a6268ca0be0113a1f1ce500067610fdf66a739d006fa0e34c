@@ -1,0 +1,15 @@
+[
+  {
+    "name": "FAN1",
+    "typeId": "FAN",
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/MEMORY",
+        "opcServer": "Ignition OPC UA Server",
+        "name": "Status",
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

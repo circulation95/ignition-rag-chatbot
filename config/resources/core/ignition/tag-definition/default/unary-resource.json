@@ -3,7 +3,10 @@
   "version": 1,
   "restricted": false,
   "overridable": true,
-  "files": [],
+  "files": [
+    "tags.json",
+    "udts.json"
+  ],
   "attributes": {
     "config": {}
   }

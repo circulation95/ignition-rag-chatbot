@@ -1,0 +1,29 @@
+{
+  "pages": {
+    "/": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "autoHide",
+            "iconUrl": "",
+            "id": "chat",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 400,
+            "viewParams": {},
+            "viewPath": "Chat"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "View"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom"
+  }
+}

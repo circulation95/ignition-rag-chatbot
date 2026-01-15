@@ -1,0 +1,40 @@
+{
+  "defaultDeviceRolePermissionMappings": [
+    {
+      "permissions": [
+        "Browse",
+        "Read",
+        "Write"
+      ],
+      "role": "Anonymous"
+    },
+    {
+      "permissions": [
+        "Browse",
+        "Read",
+        "Write",
+        "Call"
+      ],
+      "role": "AuthenticatedUser"
+    }
+  ],
+  "defaultTagProviderRolePermissionMappings": [
+    {
+      "permissions": [
+        "Browse",
+        "Read"
+      ],
+      "role": "Anonymous"
+    },
+    {
+      "permissions": [
+        "Browse",
+        "Read",
+        "Write",
+        "Call"
+      ],
+      "role": "AuthenticatedUser"
+    }
+  ],
+  "tagProviderRolePermissionMappings": {}
+}

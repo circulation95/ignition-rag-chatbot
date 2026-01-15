@@ -1,0 +1,97 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 639,
+      "width": 795
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "id": "chat",
+                "type": "toggle"
+              },
+              "scope": "C",
+              "type": "dock"
+            }
+          }
+        },
+        "meta": {
+          "name": "Icon"
+        },
+        "position": {
+          "height": 30,
+          "width": 30,
+          "x": 49,
+          "y": 12
+        },
+        "props": {
+          "path": "material/chat"
+        },
+        "type": "ia.display.icon"
+      },
+      {
+        "meta": {
+          "name": "Pump"
+        },
+        "position": {
+          "height": 100,
+          "width": 100,
+          "x": 145,
+          "y": 18
+        },
+        "propConfig": {
+          "props.state": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]FAN1"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn \"running\" if value else \"stoped\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.value.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]FAN1"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn \"RUN\" if value else \"STOP\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "label": {
+            "text": "FAN1"
+          },
+          "value": {}
+        },
+        "type": "ia.symbol.pump"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

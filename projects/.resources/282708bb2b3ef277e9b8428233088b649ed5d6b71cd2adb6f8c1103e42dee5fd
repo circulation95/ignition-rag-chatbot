@@ -34,20 +34,6 @@
         },
         "props": {
           "direction": "column",
-          "instances": [
-            {
-              "instancePosition": {},
-              "instanceStyle": {
-                "classes": ""
-              }
-            },
-            {
-              "instancePosition": {},
-              "instanceStyle": {
-                "classes": ""
-              }
-            }
-          ],
           "path": "Message"
         },
         "type": "ia.display.flex-repeater"
@@ -68,9 +54,9 @@
       "extensionFunctions": null,
       "messageHandlers": [
         {
-          "messageType": "invoke",
+          "messageType": "request",
           "pageScope": true,
-          "script": "\tsystem.perspective.print(payload)",
+          "script": "\tmessage \u003d unicode(payload[\"query\"])\n\tpayload \u003d {\n\t    \"question\": message \n\t}\n\tjson_str \u003d system.util.jsonEncode(payload)\n\turl \u003d \"http://localhost:8000/ask\"\n\t\n\ttry:\n\t    new_message \u003d {\n\t\t  \"msg\": message,\n\t\t  \"role\": \"Human\"\n\t\t}\n\t    self.getChild(\"FlexRepeater\").props.instances.append(new_message)\n\t    \n\t    response_body \u003d system.net.httpPost(url, \"application/json\", json_str, 10000, 60000)\n\t    ai_message \u003d system.util.jsonDecode(response_body)\n\t    \n\t    new_message \u003d {\n\t\t  \"msg\": ai_message,\n\t\t  \"role\": \"Assistant\"\n\t\t}\n\t    self.getChild(\"FlexRepeater\").props.instances.append(new_message)\n\t    \n\t    \n\texcept Exception as e:\n\t    print(e)",
           "sessionScope": false,
           "viewScope": false
         }
